@@ -6,10 +6,9 @@ namespace AdventureRPG
 {
     public partial class TradingScreen : Form
     {
-        //private Player _currentPlayer;
-        // Commented out this property, because I chose to pass the player as a parameter in the constructor.
-        public Player CurrentPlayer { get; set; }
         private Player _currentPlayer;
+        // Commented out this property, because I chose to pass the player as a parameter in the constructor.
+        //public Player CurrentPlayer { get; set; }
 
         public TradingScreen(Player player)
         {

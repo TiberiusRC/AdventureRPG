@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel;
+
 namespace Engine
 {
     public class PlayerQuest : INotifyPropertyChanged
     {
         private Quest _details;
         private bool _isCompleted;
+
         public Quest Details
         {
             get { return _details; }
@@ -14,6 +16,7 @@ namespace Engine
                 OnPropertyChanged("Details");
             }
         }
+
         public bool IsCompleted
         {
             get { return _isCompleted; }
@@ -24,16 +27,20 @@ namespace Engine
                 OnPropertyChanged("Name");
             }
         }
+
         public string Name
         {
             get { return Details.Name; }
         }
+
         public PlayerQuest(Quest details)
         {
             Details = details;
             IsCompleted = false;
         }
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged(string name)
         {
             if (PropertyChanged != null)

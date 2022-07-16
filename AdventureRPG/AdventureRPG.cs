@@ -18,6 +18,7 @@ namespace AdventureRPG
         {
             InitializeComponent();
 
+
             if (File.Exists(PLAYER_DATA_FILE_NAME))
             {
                 _player = Player.CreatePlayerFromXmlString(File.ReadAllText(PLAYER_DATA_FILE_NAME));
@@ -133,13 +134,14 @@ namespace AdventureRPG
                 btnEast.Visible = (_player.CurrentLocation.LocationToEast != null);
                 btnSouth.Visible = (_player.CurrentLocation.LocationToSouth != null);
                 btnWest.Visible = (_player.CurrentLocation.LocationToWest != null);
+
                 btnTrade.Visible = (_player.CurrentLocation.VendorWorkingHere != null);
 
                 // Display current location name and description
                 rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
                 rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
 
-                if (_player.CurrentLocation.MonsterLivingHere == null)
+                if (!_player.CurrentLocation.HasAMonster)
                 {
                     cboWeapons.Visible = false;
                     cboPotions.Visible = false;
@@ -194,18 +196,18 @@ namespace AdventureRPG
 
         private void AdventureRPG_FormClosing(object sender, FormClosingEventArgs e)
         {
-            File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
+            File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());           
         }
 
         private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
         {
             _player.CurrentWeapon = (Weapon)cboWeapons.SelectedItem;
         }
+
         private void btnTrade_Click(object sender, EventArgs e)
         {
             TradingScreen tradingScreen = new TradingScreen(_player);
             tradingScreen.StartPosition = FormStartPosition.CenterParent;
-            tradingScreen.CurrentPlayer = _player;
             tradingScreen.ShowDialog(this);
         }
     }
