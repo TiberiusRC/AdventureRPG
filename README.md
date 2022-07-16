@@ -11,3 +11,4 @@ Still TODO:
           * Add more items and prices
           * Add more traders
           * Add more Monsters
+          * Add more quests
