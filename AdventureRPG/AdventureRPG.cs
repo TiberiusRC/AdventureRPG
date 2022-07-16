@@ -202,7 +202,7 @@ namespace AdventureRPG
         {
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
 
-            PlayerDataMapper.SaveToDatabase(_player);
+            //PlayerDataMapper.SaveToDatabase(_player);
         }
 
         private void cboWeapons_SelectedIndexChanged(object sender, EventArgs e)
