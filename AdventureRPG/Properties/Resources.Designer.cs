@@ -59,5 +59,25 @@ namespace SuperAdventure.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AdventureRPG {
+            get {
+                object obj = ResourceManager.GetObject("AdventureRPG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d85d6nj_dea90f38_ba25_47b3_9603_e7e205f890cf {
+            get {
+                object obj = ResourceManager.GetObject("d85d6nj-dea90f38-ba25-47b3-9603-e7e205f890cf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

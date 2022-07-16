@@ -95,5 +95,9 @@
       <Name>Engine</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdventureRPG.jpg" />
+    <None Include="Resources\d85d6nj-dea90f38-ba25-47b3-9603-e7e205f890cf.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
