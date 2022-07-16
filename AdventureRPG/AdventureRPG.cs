@@ -141,7 +141,7 @@ namespace AdventureRPG
                 rtbLocation.Text = _player.CurrentLocation.Name + Environment.NewLine;
                 rtbLocation.Text += _player.CurrentLocation.Description + Environment.NewLine;
 
-                if (_player.CurrentLocation.MonsterLivingHere == null)
+                if (!_player.CurrentLocation.HasAMonster)
                 {
                     cboWeapons.Visible = false;
                     cboPotions.Visible = false;
