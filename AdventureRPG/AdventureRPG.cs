@@ -198,7 +198,7 @@ namespace AdventureRPG
             _player.UsePotion(potion);
         }
 
-        private void SuperAdventure_FormClosing(object sender, FormClosingEventArgs e)
+        private void AdventureRPG_FormClosing(object sender, FormClosingEventArgs e)
         {
             File.WriteAllText(PLAYER_DATA_FILE_NAME, _player.ToXmlString());
 
