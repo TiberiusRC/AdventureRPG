@@ -11,6 +11,7 @@ namespace Engine
         public string Name { get; set; }
         public string Description { get; set; }
         // extra location properties
+        public Vendor VendorWorkingHere { get; set; }
         public Item ItemRequiredToEnter { get; set; }
         public Quest QuestAvailableHere { get; set; }
         public Monster MonsterLivingHere { get; set; }
