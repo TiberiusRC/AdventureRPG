@@ -5,6 +5,7 @@ namespace Engine
     public class LivingCreature : INotifyPropertyChanged
     {
         private int _currentHitPoints;
+
         public int CurrentHitPoints
         {
             get { return _currentHitPoints; }
@@ -14,15 +15,19 @@ namespace Engine
                 OnPropertyChanged("CurrentHitPoints");
             }
         }
+
         public int MaximumHitPoints { get; set; }
+
+        public bool IsDead { get { return CurrentHitPoints <= 0; } }
 
         public LivingCreature(int currentHitPoints, int maximumHitPoints)
         {
             CurrentHitPoints = currentHitPoints;
             MaximumHitPoints = maximumHitPoints;
         }
-        // Check for changes
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged(string name)
         {
             if (PropertyChanged != null)
@@ -30,8 +35,5 @@ namespace Engine
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
             }
         }
-
     }
-
-
 }
