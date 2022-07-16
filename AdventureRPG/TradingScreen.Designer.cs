@@ -33,14 +33,17 @@
             this.lblMyInventory = new System.Windows.Forms.Label();
             this.lblVendorInventory = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMyItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendorItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMyItems
             // 
             this.dgvMyItems.AllowUserToAddRows = false;
             this.dgvMyItems.AllowUserToDeleteRows = false;
+            this.dgvMyItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dgvMyItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMyItems.Location = new System.Drawing.Point(13, 43);
             this.dgvMyItems.Name = "dgvMyItems";
@@ -52,8 +55,9 @@
             // 
             this.dgvVendorItems.AllowUserToAddRows = false;
             this.dgvVendorItems.AllowUserToDeleteRows = false;
+            this.dgvVendorItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dgvVendorItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVendorItems.Location = new System.Drawing.Point(276, 43);
+            this.dgvVendorItems.Location = new System.Drawing.Point(505, 43);
             this.dgvVendorItems.Name = "dgvVendorItems";
             this.dgvVendorItems.ReadOnly = true;
             this.dgvVendorItems.Size = new System.Drawing.Size(240, 216);
@@ -71,7 +75,7 @@
             // lblVendorInventory
             // 
             this.lblVendorInventory.AutoSize = true;
-            this.lblVendorInventory.Location = new System.Drawing.Point(349, 13);
+            this.lblVendorInventory.Location = new System.Drawing.Point(578, 13);
             this.lblVendorInventory.Name = "lblVendorInventory";
             this.lblVendorInventory.Size = new System.Drawing.Size(95, 13);
             this.lblVendorInventory.TabIndex = 3;
@@ -79,7 +83,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(441, 274);
+            this.btnClose.Location = new System.Drawing.Point(670, 274);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 4;
@@ -87,11 +91,23 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SuperAdventure.Properties.Resources.d85d6nj_dea90f38_ba25_47b3_9603_e7e205f890cf;
+            this.pictureBox1.Location = new System.Drawing.Point(259, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 216);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // TradingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 310);
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ClientSize = new System.Drawing.Size(761, 310);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblVendorInventory);
             this.Controls.Add(this.lblMyInventory);
@@ -101,6 +117,7 @@
             this.Text = "Trade";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMyItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendorItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,5 +130,6 @@
         private System.Windows.Forms.Label lblMyInventory;
         private System.Windows.Forms.Label lblVendorInventory;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

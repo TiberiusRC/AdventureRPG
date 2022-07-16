@@ -50,8 +50,10 @@
             this.dgvInventory = new System.Windows.Forms.DataGridView();
             this.dgvQuests = new System.Windows.Forms.DataGridView();
             this.btnTrade = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,6 +144,7 @@
             // 
             // cboWeapons
             // 
+            this.cboWeapons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.cboWeapons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboWeapons.FormattingEnabled = true;
             this.cboWeapons.Location = new System.Drawing.Point(369, 559);
@@ -151,6 +154,7 @@
             // 
             // cboPotions
             // 
+            this.cboPotions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.cboPotions.FormattingEnabled = true;
             this.cboPotions.Location = new System.Drawing.Point(369, 593);
             this.cboPotions.Name = "cboPotions";
@@ -225,6 +229,7 @@
             // 
             // rtbLocation
             // 
+            this.rtbLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.rtbLocation.Location = new System.Drawing.Point(347, 19);
             this.rtbLocation.Name = "rtbLocation";
             this.rtbLocation.ReadOnly = true;
@@ -234,6 +239,7 @@
             // 
             // rtbMessages
             // 
+            this.rtbMessages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.rtbMessages.Location = new System.Drawing.Point(347, 130);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
@@ -246,6 +252,7 @@
             this.dgvInventory.AllowUserToAddRows = false;
             this.dgvInventory.AllowUserToDeleteRows = false;
             this.dgvInventory.AllowUserToResizeRows = false;
+            this.dgvInventory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventory.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvInventory.Enabled = false;
@@ -262,6 +269,7 @@
             this.dgvQuests.AllowUserToAddRows = false;
             this.dgvQuests.AllowUserToDeleteRows = false;
             this.dgvQuests.AllowUserToResizeRows = false;
+            this.dgvQuests.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dgvQuests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuests.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvQuests.Enabled = false;
@@ -272,9 +280,10 @@
             this.dgvQuests.RowHeadersVisible = false;
             this.dgvQuests.Size = new System.Drawing.Size(312, 189);
             this.dgvQuests.TabIndex = 20;
-            //
+            // 
             // btnTrade
-            //
+            // 
+            this.btnTrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrade.Location = new System.Drawing.Point(493, 620);
             this.btnTrade.Name = "btnTrade";
             this.btnTrade.Size = new System.Drawing.Size(75, 23);
@@ -282,13 +291,24 @@
             this.btnTrade.Text = "Trade";
             this.btnTrade.UseVisualStyleBackColor = true;
             this.btnTrade.Click += new System.EventHandler(this.btnTrade_Click);
-
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SuperAdventure.Properties.Resources.AdventureRPG;
+            this.pictureBox1.Location = new System.Drawing.Point(713, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(745, 615);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // AdventureRPG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 651);
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ClientSize = new System.Drawing.Size(1470, 651);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnTrade);
             this.Controls.Add(this.dgvQuests);
             this.Controls.Add(this.dgvInventory);
@@ -313,10 +333,11 @@
             this.Controls.Add(this.label1);
             this.Name = "AdventureRPG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "My Game";
+            this.Text = "Adventure RPG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdventureRPG_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,6 +367,7 @@
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.DataGridView dgvQuests;
         private System.Windows.Forms.Button btnTrade;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
